@@ -33,6 +33,7 @@ class PairsTrading(Strategy):
             if not is_cointegrated:
                 self.shared_vars["s1-position"] = 0
                 self.shared_vars["s2-position"] = 0
+                return
 
         z_scores = self.z_score
         if self.is_close and z_scores < -1.2:
